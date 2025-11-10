@@ -9,7 +9,7 @@
     </div>
 
     <div v-else class="space-y-4">
-      <NoteCard v-for="note in sortedNotes" :key="note.id" :note="note" @edit="handleEdit" @delete="handleDelete" />
+      <NoteCard v-for="note in notes" :key="note.id" :note="note" @edit="handleEdit" @delete="handleDelete" />
     </div>
 
     <div v-if="error" class="p-4 bg-destructive/10 border border-destructive rounded-md text-sm text-destructive mt-4">
@@ -24,7 +24,6 @@ import NoteCard from './NoteCard.vue'
 
 interface Props {
   notes: Note[]
-  sortedNotes: Note[]
   isLoading: boolean
   error: string | null
 }

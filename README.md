@@ -1,43 +1,54 @@
-# NoteFE
+# Frontend Project Setup & Operations Guide
 
-This template should help get you started developing with Vue 3 in Vite.
+## Table of Contents
+- [Installation](#installation)
+- [Environment Setup](#environment-setup)
+---
 
-## Recommended IDE Setup
+## Installation
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+### Prerequisites
+- Node.js (v18 or higher)
+- npm or yarn package manager
 
-## Recommended Browser Setup
+### Steps
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd) 
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+1. **Clone the repository**
+   ```bash
+   git clone <repository-url>
+   cd <project-name>
+   ```
 
-## Type Support for `.vue` Imports in TS
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+3. **Verify installation**
+   ```bash
+   npm run dev
+   ```
 
-## Customize configuration
+The application should now be running on `http://localhost:5173` (or your configured port).
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+---
 
-## Project Setup
+## Environment Setup
 
-```sh
-npm install
+### Create Environment File
+
+Create a `.env` file in the root directory of your project:
+
+```bash
+cp .env.example .env
 ```
 
-### Compile and Hot-Reload for Development
+### Environment Variables
 
-```sh
-npm run dev
+Add the following variables to your `.env` file:
+
+```env
+# API Configuration
+VUE_APP_API_URL=http://localhost:5250/api/v1
 ```
-
-### Type-Check, Compile and Minify for Production
-
-```sh
-npm run build
-```
-# NoteFE
+---
