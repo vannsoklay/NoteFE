@@ -15,8 +15,8 @@
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
-   cd <project-name>
+   git clone git@github.com:vannsoklay/NoteFE.git
+   cd NoteFE
    ```
 
 2. **Install dependencies**
